@@ -36,10 +36,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'corsheaders',
     'django.contrib.staticfiles',
+    'game.apps.GameConfig',
+    'graphene_django',
 ]
+# CORS_ALLOW_ALL_ORIGINS = True
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -68,6 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'codequest.wsgi.application'
+
 
 
 # Database
@@ -121,3 +127,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+GRAPHENE = {
+    'SCHEMA': 'codequest.schema.schema'
+}
+
+
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000',  # If your frontend runs on port 3000
+#     'http://127.0.0.1:3000',
+#     # Add other allowed origins here
+# ]
