@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/challenges">Challenges</router-link> |
     <router-link to="/articles">Articles</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link>   |
+    <router-link class="accountSign" to="/#">Signup</router-link>
   </nav>
   <router-view/>
   <hr/>
@@ -35,4 +36,14 @@ hr{
 nav a.router-link-exact-active {
   color: #42b983;
 }
+.accountSign{
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .accountSign{
+  padding-left: 10px;
+}
+}
+
 </style>
