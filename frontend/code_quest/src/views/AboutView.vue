@@ -127,5 +127,13 @@ a {
   text-align: justify;
   text-wrap: balance;
 }
+@media (max-width: 768px) {
+    .about-para{
+    width:90%;    
+  }
+  .about .about-conclusion{
+    width:90%;    
+  }
+}
 </style>
 

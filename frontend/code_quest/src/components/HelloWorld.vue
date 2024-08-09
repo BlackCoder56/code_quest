@@ -30,24 +30,32 @@
     <ul class="iconz">
       <li><a href="https://vuejs.org" target="_blank" rel="noopener">
         <font-awesome-icon :icon="['fab', 'github']" />
-        BlackCoder56
+        <span class="m-span">BlackCoder56</span>
       </a>
       </li>
       <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">
         <font-awesome-icon :icon="['fab', 'twitter']" />
+        <span class="m-span">
         Blackcoder56
+        </span>
       </a></li>
       <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">
         <font-awesome-icon :icon="['fab', 'discord']" />
+        <span class="m-span">
         Community Chat
+      </span>
       </a></li>
       <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">
         <font-awesome-icon :icon="['fab', 'linkedin']" />
+        <span class="m-span">
         elishabyamukama
+        </span>
       </a></li>
       <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">
         <font-awesome-icon :icon="['fab', 'youtube']" />
+        <span class="m-span">
         Youtube
+      </span>
       </a></li>
     </ul>
     <h3>Technologies</h3>
@@ -103,5 +111,14 @@ li {
 }
 a {
   color: #42b983;
+}
+.m-span{
+    padding-left: 5px;
+  }
+
+@media (max-width: 768px) {
+  .m-span{
+    display: none;
+  }
 }
 </style>
