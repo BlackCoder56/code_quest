@@ -8,7 +8,7 @@
     </div>
 
     <!-- Conditionally render the login link or profile picture -->
-    <router-link v-if="!isLoggedIn" class="accountSign" to="/login">Login</router-link>
+    <router-link v-if="!isLoggedIn" class="accountSign" to="/challenges">Login</router-link>
     <div v-else class="profile-container">
       <img :src="user.profilePicture" alt="Profile Picture" class="profile-picture" />
     </div>
@@ -34,7 +34,7 @@ export default {
   methods: {
     checkAuthStatus() {
       // Replace with actual authentication check
-      this.isLoggedIn = true; // Set this based on actual auth status
+      this.isLoggedIn = false; // Set this based on actual auth status
     }
   }
 };

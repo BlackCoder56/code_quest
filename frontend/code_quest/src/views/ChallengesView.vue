@@ -24,7 +24,7 @@ export default {
         profilePicture: "/path/to/profile-pic.jpg"
       },
       showModal: false,
-      isLoggedIn: true,
+      isLoggedIn: false,
       levels: [
         { id: 1, title: "Introduction to Python" },
         { id: 2, title: "Data Types" },
