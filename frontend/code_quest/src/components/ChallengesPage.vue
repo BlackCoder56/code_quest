@@ -52,11 +52,10 @@
             <td  class="left-align" :class="statusClass(challenge.status)">
               {{ challenge.status }}
             </td>
-            <td>
-              <button v-if="challenge.status === 'Incomplete'">Continue</button>
-              <button v-else-if="challenge.status === 'Failed'">Try again</button>
-              <button v-else-if="challenge.status === 'Complete'">Review</button>
-              <button v-else>Review</button>
+            <td class="left-align-btn">
+              <router-link :to="{ name: 'ChallengeView', params: { id: challenge.id } }">
+                <button>{{ challenge.status === 'Incomplete' ? 'Start' : 'Review' }}</button>
+              </router-link>
             </td>
           </tr>
         </tbody>
@@ -206,6 +205,7 @@ tbody tr:hover {
 }
 
 button {
+  width:30%;
   padding: 5px 10px;
   border: none;
   background-color: #42b983;
