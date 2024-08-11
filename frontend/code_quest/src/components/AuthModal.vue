@@ -4,7 +4,6 @@
         <div class="modal-header">
           <h2 v-if="isLogin">Login</h2>
           <h2 v-else>Sign Up</h2>
-          <!-- <button @click="closeModal" class="close-button">&times;</button> -->
         </div>
         <div class="modal-body">
           <form @submit.prevent="handleSubmit">
@@ -78,8 +77,8 @@
     align-items: center;
     backdrop-filter: blur(5px);
     z-index: 1000;
+    padding:10px;
   }
-  
   .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -89,7 +88,7 @@
   }
   
   .modal-header {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
   }
@@ -106,12 +105,13 @@
   }
   
   label {
+    text-align:left;
     display: block;
     margin-bottom: 5px;
   }
   
   input {
-    width: 100%;
+    width: 90%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
